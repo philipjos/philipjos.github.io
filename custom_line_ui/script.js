@@ -42,6 +42,7 @@ function drawPoint(point, pointIndex) {
     curveCanvasContent.appendChild(pointElement)
 
     pointElement.addEventListener("mousedown", ()=>{pressPoint(pointIndex)})
+    pointElement.addEventListener("touchstart", ()=>{pressPoint(pointIndex)})
     pointElement.addEventListener("click", ()=>{clickPoint(pointIndex)})
 }
 
@@ -245,5 +246,6 @@ function onload() {
 }
 
 document.addEventListener("mousemove", onMouseMove)
+document.addEventListener("touchmove", onMouseMove)
 document.addEventListener("mouseup", mouseUp)
 document.body.onload = onload
