@@ -1,0 +1,29 @@
+.curve_container {
+    margin: 16;
+    display: flex;
+    justify-content: center;
+}
+
+#curve_section {
+    background-color: #F8F8F8;
+    display: flex;
+    justify-content: center;
+    border-radius: 5px;
+
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none;
+}
+
+#curve_canvas {
+    margin: 32px;
+    width: 300px;
+    height: 200px;
+    border-radius: 5px;
+    position: relative;
+    top: 0px;
+}
+
