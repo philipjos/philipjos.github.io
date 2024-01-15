@@ -1,17 +1,17 @@
 const noiseViewCanvasWidth = 300
 const noiseViewCanvasHeight = 200
-const noiseViewPointSize = 1
+const noiseViewPointSize = 4
 
 function drawNoiseViewPoint(x, y, displacement) {
     const point = document.createElement("div")
-    point.style.backgroundColor = "#CEFCFF"
+    point.style.backgroundColor = "#303030"
     point.style.width = noiseViewPointSize.toString() + "px"
     point.style.height = noiseViewPointSize.toString() + "px"
     point.style.borderRadius = (noiseViewPointSize / 2).toString() + "px"
     point.style.position = "relative"
     point.style.top = (y - displacement).toString() + "px"
     point.style.left = x.toString() + "px"
-    point.style["boxShadow"] = "0 0 5px 1px #19F1FF, 0 0 1px 1px #CEFCFF inset";
+    //point.style["boxShadow"] = "0 0 2px 1px #BFFBFF inset";
     const noiseViewCanvas = document.getElementById("noiseViewCanvas")
     noiseViewCanvas.appendChild(point)
 }

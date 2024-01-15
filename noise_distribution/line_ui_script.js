@@ -110,12 +110,6 @@ function updateCurveUI() {
 
         lastPoint = centerPoint
     }
-
-    updateThrottle += 1
-    if (updateThrottle >= 3) {
-        updateThrottle = 0
-        oncurveChangeCallback()
-    }
     
 }
 
@@ -213,6 +207,7 @@ function canvasPress(event) {
     const pointIndex = sortPoint(newPointIndex)
 
     updateCurveUI()
+    oncurveChangeCallback()
     draggingPoint = pointIndex
 }
 
@@ -228,6 +223,7 @@ function clickPoint(point) {
     if (point != 0 && point != points.length - 1) {
         points.splice(point, 1)
         updateCurveUI()
+        oncurveChangeCallback()
     }
 }
 
@@ -241,6 +237,11 @@ function onMouseMove(event) {
         }
 
         updateCurveUI()
+        updateThrottle += 1
+        if (updateThrottle >= 3) {
+            updateThrottle = 0
+            oncurveChangeCallback()
+        }
     }
 }
 
@@ -255,6 +256,7 @@ function onload() {
     canvas.appendChild(curveCanvasContent)
 
     updateCurveUI()
+    oncurveChangeCallback()
 }
 
 document.addEventListener("mousemove", onMouseMove)

@@ -9,5 +9,11 @@
 #noiseViewCanvas {
     position: relative;
     width: 300px;
-    
+    height: 200px;
+    background-color:#FFFFFF;
+    border-radius: 5px;
+    border-width: 5px;
+    border-color: #F0F0F0;
+    border-style: solid;
+    overflow: hidden;
 }
