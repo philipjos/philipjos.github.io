@@ -1,0 +1,13 @@
+#noise_section {
+    margin: 100px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    
+}
+
+#noiseViewCanvas {
+    position: relative;
+    width: 300px;
+    
+}
