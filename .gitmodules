@@ -1,0 +1,3 @@
+[submodule "abstract-art-machine"]
+	path = abstract-art-machine
+	url = git@github.com:philipjos/abstract-art-machine.git
