@@ -106,6 +106,22 @@ function addLineClicked() {
     const controlBox = document.createElement('div')
     controlBox.classList.add('control-box')
 
+    const newLineDeleteWrapper = document.createElement('div')
+    newLineDeleteWrapper.classList.add('delete-wrapper')
+    controlBox.appendChild(newLineDeleteWrapper)
+
+    const newLineDeleteButton = document.createElement('button')
+    newLineDeleteButton.innerHTML = '-'
+    newLineDeleteButton.classList.add('delete-button')
+    const id = lineControls.length
+    newLineDeleteButton.onclick = () => {
+        controlBox.remove()
+        lineControls = lineControls.filter((lineControl) => {
+            return lineControl.id != id
+        })
+    }
+    newLineDeleteWrapper.appendChild(newLineDeleteButton)
+
     const newLinePhaseSlider = document.createElement('input')
     newLinePhaseSlider.type = 'range'
     newLinePhaseSlider.min = 0
@@ -161,6 +177,7 @@ function addLineClicked() {
     controls.appendChild(controlBox)
 
     lineControls.push({
+        "id": id,
         "phaseSlider": newLinePhaseSlider,
         "waveLengthSlider": newLineWaveLengthSlider,
         "colorSlider": newLineColorSlider,
