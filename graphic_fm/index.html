@@ -1,0 +1,21 @@
+<head>
+    <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+    <div class="oscilloscope">
+    </div>
+    <div class="controls-section">
+        <div class="title">
+            Modulator amplitude
+        </div>
+        <input 
+            type="range"
+            id="modulatorAmplitude" 
+            min="0" 
+            max="100" 
+            value="50"
+            onInput="onModulatorAmplitudeSliderChange(event)"
+        />
+    </div>
+    <script src="./script.js"></script>
+</body>
