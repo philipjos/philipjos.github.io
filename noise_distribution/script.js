@@ -29,25 +29,25 @@ function update() {
         const x = i / sample_count
         
         var found = false
-        var safetyLimit = 1000
+        var safetyLimit = 10000
         var j = 0
         while ((!found) && j < safetyLimit) {    
             var candidate = Math.random()
             var prevPoint = -1
-            for (var j = 0; j < points.length && prevPoint == -1; j++) {
-                if(points[j][0] > candidate) {
-                    prevPoint = j - 1 
+            for (var k = 0; k < points.length && prevPoint == -1; k++) {
+                if(points[k][0] > candidate) {
+                    prevPoint = k - 1 
                 }
                 //console.log(points[j][0])
                 //console.log(candidate)
             }
             //TODO: fix in line-ui
             const invertedY_point = 1 - points[prevPoint + 1][1]
-            const invertedY_prev = 1 -points[prevPoint][1]
+            const invertedY_prev = 1 - points[prevPoint][1]
 
             const xDif = points[prevPoint + 1][0] - points[prevPoint][0]
             const yDif = invertedY_point - invertedY_prev
-            const probability = invertedY_prev + yDif * (candidate - points[prevPoint][0])
+            const probability = invertedY_prev + yDif * Math.max(0.01, (candidate - points[prevPoint][0]))
             
             //console.log("debug a1")
             //console.log(probability)
