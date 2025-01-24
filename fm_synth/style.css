@@ -1,0 +1,30 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+
+.oscilloscope {
+    background-color: #333340;
+    width: 400px;
+    height: 100px;
+    display: flex;
+    position: relative;
+    margin: 16px 0px 0px 0px;
+}
+
+.controls-section .title, .text {
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0px 0px 4px 2px;
+}
+
+input {
+    width: 100%;
+    margin: 0px 0px 8px 0px;
+}
+
+.controls-section {
+    width: 400px;
+}

@@ -1,0 +1,48 @@
+<head>
+    <link rel="stylesheet" href="./style.css" />
+</head>
+<body
+    onKeyDown="onKeyDown(event)"
+>
+    <div class="oscilloscope">
+    </div>
+    <div class="controls-section">
+        <div class="title">
+            Carrier frequency
+        </div>
+        <input 
+            type="range"
+            id="carrierFrequency" 
+            min="0" 
+            max="1000" 
+            value="500"
+            onInput="onCarrierFrequencySliderChange(event)"
+        />
+        <div class="title">
+            Modulator frequency
+        </div>
+        <input 
+            type="range"
+            id="modulatorFrequency" 
+            min="0" 
+            max="1000" 
+            value="20"
+            onInput="onModulatorFrequencySliderChange(event)"
+        />
+        <div class="title">
+            Modulator amplitude
+        </div>
+        <input 
+            type="range"
+            id="modulatorAmplitude" 
+            min="0" 
+            max="1000" 
+            value="500"
+            onInput="onModulatorAmplitudeSliderChange(event)"
+        />
+    </div>
+    <div class="text">
+        Press any key to play sound.
+    </div>
+    <script src="./script.js"></script>
+</body>
