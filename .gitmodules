@@ -4,3 +4,6 @@
 [submodule "modular_synth"]
 	path = modular_synth
 	url = git@github.com:philipjos/modular_synth.git
+[submodule "anthologize"]
+	path = anthologize
+	url = git@github.com:philipjos/anthologize.git
