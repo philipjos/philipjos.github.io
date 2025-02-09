@@ -1,3 +1,6 @@
 [submodule "abstract-art-machine"]
 	path = abstract-art-machine
 	url = git@github.com:philipjos/abstract-art-machine.git
+[submodule "modular_synth"]
+	path = modular_synth
+	url = git@github.com:philipjos/modular_synth.git
